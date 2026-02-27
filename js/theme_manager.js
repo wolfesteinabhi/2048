@@ -19,7 +19,7 @@ ThemeManager.prototype.saveTheme = function (theme) {
   try {
     window.localStorage.setItem(this.storageKey, theme);
   } catch (error) {
-    // Ignore write errors (private mode, disabled storage, etc.)
+    // Ignore write errors
   }
 };
 
@@ -35,8 +35,7 @@ ThemeManager.prototype.applyTheme = function (theme) {
 
 ThemeManager.prototype.applyInitialTheme = function () {
   var savedTheme = this.getSavedTheme();
-  var theme = savedTheme || "light";
-  this.applyTheme(theme);
+  this.applyTheme(savedTheme || "light");
 };
 
 ThemeManager.prototype.updateToggleText = function () {
@@ -48,9 +47,7 @@ ThemeManager.prototype.updateToggleText = function () {
 };
 
 ThemeManager.prototype.toggleTheme = function (event) {
-  if (event) {
-    event.preventDefault();
-  }
+  if (event) event.preventDefault();
 
   var nextTheme = this.isDarkModeEnabled() ? "light" : "dark";
   this.applyTheme(nextTheme);
@@ -61,5 +58,9 @@ ThemeManager.prototype.bindEvents = function () {
   if (!this.toggleButton) return;
 
   this.toggleButton.addEventListener("click", this.toggleTheme.bind(this));
-  this.toggleButton.addEventListener("touchend", this.toggleTheme.bind(this));
+  this.toggleButton.addEventListener(this.getTouchEndEvent(), this.toggleTheme.bind(this));
+};
+
+ThemeManager.prototype.getTouchEndEvent = function () {
+  return window.navigator.msPointerEnabled ? "MSPointerUp" : "touchend";
 };
