@@ -1,7 +1,7 @@
 # 2048
 A small clone of [1024](https://play.google.com/store/apps/details?id=com.veewo.a1024), based on [Saming's 2048](http://saming.fr/p/2048/) (also a clone).
 
-Made just for fun. [Play it here!](http://gabrielecirulli.github.io/2048/)
+Made just for fun. [Play it here!](https://<your-github-username>.github.io/2048/)
 
 The official app can also be found on the [Play Store](https://play.google.com/store/apps/details?id=com.gabrielecirulli.app2048) and [App Store!](https://itunes.apple.com/us/app/2048-by-gabriele-cirulli/id868076805)
 
@@ -25,6 +25,11 @@ Many thanks to [rayhaanj](https://github.com/rayhaanj), [Mechazawa](https://gith
 </p>
 
 That screenshot is fake, by the way. I never reached 2048 :smile:
+
+
+## Run in your browser (including GitHub)
+- **Local (no build step):** clone/download this repository and open `index.html` directly in your browser.
+- **GitHub-hosted:** push your branch to GitHub and enable **GitHub Pages** for the repository (Settings → Pages, deploy from the main branch root). Then open the generated Pages URL.
 
 ## Contributing
 Changes and improvements are more than welcome! Feel free to fork and open a pull request. Please make your changes in a specific branch and request to pull into `master`! If you can, please make sure the game fully works before sending the PR, as that will help speed up the process.
