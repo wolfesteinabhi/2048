@@ -455,6 +455,15 @@ hr {
   @include clearfix;
 }
 
+.game-controls {
+  float: right;
+
+  a {
+    float: left;
+    margin-left: 8px;
+  }
+}
+
 .game-intro {
   float: left;
   line-height: 42px;
@@ -465,11 +474,60 @@ hr {
   @include button;
   display: block;
   text-align: center;
-  float: right;
+}
+
+.theme-toggle-button {
+  @include button;
+  display: block;
+  text-align: center;
 }
 
 .game-explanation {
   margin-top: 50px;
+}
+
+
+body.dark-mode {
+  background: #111827;
+  color: #e5e7eb;
+}
+
+body.dark-mode a {
+  color: #e5e7eb;
+}
+
+body.dark-mode hr {
+  border-bottom-color: #374151;
+}
+
+body.dark-mode .score-container,
+body.dark-mode .best-container {
+  background: #1f2937;
+  color: #f9fafb;
+}
+
+body.dark-mode .score-container:after,
+body.dark-mode .best-container:after {
+  color: #cbd5e1;
+}
+
+body.dark-mode .restart-button,
+body.dark-mode .theme-toggle-button,
+body.dark-mode .game-container .game-message a {
+  background: #374151;
+  color: #f9fafb;
+}
+
+body.dark-mode .game-container {
+  background: #1f2937;
+}
+
+body.dark-mode .grid-cell {
+  background: rgba(148, 163, 184, 0.2);
+}
+
+body.dark-mode .tile .tile-inner {
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
 }
 
 @include smaller($mobile-threshold) {
@@ -518,12 +576,25 @@ hr {
     line-height: 1.65;
   }
 
-  .restart-button {
+  .game-controls {
     width: 42%;
-    padding: 0;
     display: block;
     box-sizing: border-box;
     margin-top: 2px;
+
+    a {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 6px;
+      padding: 0;
+      float: none;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    a:first-child {
+      margin-top: 0;
+    }
   }
 
   // Render the game field at the right width
