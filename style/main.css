@@ -551,6 +551,7 @@ hr {
   margin-top: 50px; }
 
 
+html.dark-mode,
 body.dark-mode {
   background: #000000;
   color: #e5e7eb; }

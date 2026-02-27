@@ -29,6 +29,7 @@ ThemeManager.prototype.isDarkModeEnabled = function () {
 
 ThemeManager.prototype.applyTheme = function (theme) {
   var darkModeEnabled = theme === "dark";
+  document.documentElement.classList.toggle(this.darkModeClass, darkModeEnabled);
   document.body.classList.toggle(this.darkModeClass, darkModeEnabled);
   this.updateToggleText();
 };
