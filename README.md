@@ -36,11 +36,11 @@ This repository is a static web app and can be published directly with GitHub Pa
 If you see **"404 There isn't a GitHub Pages site here"**, run through this checklist:
 
 1. Go to **Settings → Pages** and set **Source** to **GitHub Actions**.
-2. Push a commit to GitHub (this triggers `.github/workflows/pages.yml`).
+2. Push/merge your commit to `main` or `master` (deployment is intentionally restricted to these branches to satisfy `github-pages` environment protection rules).
 3. Open the **Actions** tab and confirm the **Deploy static site to GitHub Pages** workflow succeeds.
 4. Wait 1–2 minutes and refresh `https://wolfesteinabhi.github.io/2048/`.
 
-You can also manually trigger a deployment from **Actions → Deploy static site to GitHub Pages → Run workflow**.
+You can also manually trigger a deployment from **Actions → Deploy static site to GitHub Pages → Run workflow** (run it against `main`/`master`).
 
 ## Contributing
 Changes and improvements are more than welcome! Feel free to fork and open a pull request. Please make your changes in a specific branch and request to pull into `master`! If you can, please make sure the game fully works before sending the PR, as that will help speed up the process.
