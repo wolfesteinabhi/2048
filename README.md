@@ -1,10 +1,7 @@
 # 2048
 A small clone of [1024](https://play.google.com/store/apps/details?id=com.veewo.a1024), based on [Saming's 2048](http://saming.fr/p/2048/) (also a clone).
 
-
 Made just for fun. [Play it here!](https://wolfesteinabhi.github.io/2048/)
-
-
 
 The official app can also be found on the [Play Store](https://play.google.com/store/apps/details?id=com.gabrielecirulli.app2048) and [App Store!](https://itunes.apple.com/us/app/2048-by-gabriele-cirulli/id868076805)
 
@@ -36,7 +33,14 @@ This repository is a static web app and can be published directly with GitHub Pa
 - Repository URL: `https://github.com/wolfesteinabhi/2048`
 - Live URL: `https://wolfesteinabhi.github.io/2048/`
 
-After pushing to GitHub, enable Pages in **Settings → Pages** and select **GitHub Actions** as the source.
+If you see **"404 There isn't a GitHub Pages site here"**, run through this checklist:
+
+1. Go to **Settings → Pages** and set **Source** to **GitHub Actions**.
+2. Push a commit to GitHub (this triggers `.github/workflows/pages.yml`).
+3. Open the **Actions** tab and confirm the **Deploy static site to GitHub Pages** workflow succeeds.
+4. Wait 1–2 minutes and refresh `https://wolfesteinabhi.github.io/2048/`.
+
+You can also manually trigger a deployment from **Actions → Deploy static site to GitHub Pages → Run workflow**.
 
 ## Contributing
 Changes and improvements are more than welcome! Feel free to fork and open a pull request. Please make your changes in a specific branch and request to pull into `master`! If you can, please make sure the game fully works before sending the PR, as that will help speed up the process.
