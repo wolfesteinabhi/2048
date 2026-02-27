@@ -30,9 +30,13 @@ Many thanks to [rayhaanj](https://github.com/rayhaanj), [Mechazawa](https://gith
 That screenshot is fake, by the way. I never reached 2048 :smile:
 
 
-## Run in your browser (including GitHub)
-- **Local (no build step):** clone/download this repository and open `index.html` directly in your browser.
-- **GitHub-hosted:** push your branch to GitHub and enable **GitHub Pages** for the repository (Settings → Pages, deploy from the main branch root). Then open the generated Pages URL.
+## GitHub Pages deployment
+This repository is a static web app and can be published directly with GitHub Pages.
+
+- Repository URL: `https://github.com/wolfesteinabhi/2048`
+- Live URL: `https://wolfesteinabhi.github.io/2048/`
+
+After pushing to GitHub, enable Pages in **Settings → Pages** and select **GitHub Actions** as the source.
 
 ## Contributing
 Changes and improvements are more than welcome! Feel free to fork and open a pull request. Please make your changes in a specific branch and request to pull into `master`! If you can, please make sure the game fully works before sending the PR, as that will help speed up the process.
